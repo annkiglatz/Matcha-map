@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Das Dokument</title>
+
+    <style>
+        /* Resets */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .ht {
+            /* hide text */
+            text-indent: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        /* For modern browsers */
+        
+        .cf:before,
+        .cf:after {
+            content: "";
+            display: table;
+        }
+        
+        .cf:after {
+            clear: both;
+        }
+        
+        body {
+            background: #e6e6e6 url(img/paper-bg.jpg) left top repeat fixed;
+            color: #333;
+            font-family: helvetica;
+            font-size: 100%;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+        }
+        /* ueberarbeiten sie px-basierte groessenangaben fuer alle ueberschriften, stellen sie diese auf em-basierte angaben um */
+        
+        h1,
+        h2,
+        h3 {
+            font-family: myriad-pro-condensed, sans-serif;
+        }
+        
+        h2 {
+            font-size: 2em;
+            font-weight: normal;
+            margin: 0 0 15px;
+        }
+        
+        h3 {
+            font-size: 1.6em;
+            font-weight: normal;
+            margin: 30px 0 15px;
+        }
+        
+        .content_sub h2,
+        .content_sub h3 {
+            font-family: myriad-pro, sans-serif;
+            font-weight: bold;
+        }
+        
+        .content_sub h2 {
+            font-size: 1.2em;
+            margin: 15px 0 0;
+        }
+        
+        .content_sub h3 {
+            color: #333;
+            font-size: 1em;
+            margin: 15px 0 0;
+        }
+        
+        p {
+            margin: 0 0 15px;
+            font-size: 1em;
+        }
+        
+        ul {
+            margin-left: 15px;
+        }
+        
+        .wrapper {
+            background: #e6e6e6;
+            border: 1px solid #ccc;
+            border-bottom: none;
+            margin: 48px auto 0;
+            max-width: 67.5em;
+        }
+        
+        header {
+            background: #009999;
+            color: #fff;
+        }
+        
+        h1 {
+            background: transparent url('img/responsive.png') left top no-repeat;
+            background-size: 100% auto;
+            float: left;
+            height: 66px;
+            margin: 48px 0 48px 5.55555556%;
+            text-indent: -99999px;
+            width: 240px;
+        }
+        
+        .tagline {
+            float: right;
+            font-size: 1.2em;
+            font-style: italic;
+            line-height: 1.4;
+            margin: 45px 5.55555556% 0 0;
+            width: 22.22222222%;
+        }
+        
+        article {
+            background: transparent url(img/monitore.png) 96.15384615% bottom no-repeat;
+            background-size: 27.77777778% auto;
+        }
+        
+        .content_main {
+            background: #fff;
+            float: left;
+            padding: 48px 5.555555556%;
+            width: 55.55555556%;
+        }
+        
+        .content_sub {
+            float: right;
+            padding: 48px 5.555555556%;
+            width: 22.22222222%;
+        }
+        
+        .portrait {
+            border: 1px solid #ccc;
+            max-width: 100%;
+        }
+        
+        footer {
+            background: #5a5a5a;
+            /* 333*/
+            color: #fff;
+            clear: both;
+            padding: 15px 5.555555556% 1px;
+        }
+        
+        @media screen and (max-width:1082px) {
+            .wrapper {
+                border: none;
+                margin: 0;
+                max-width: 100%;
+            }
+        }
+        
+        @media screen and (max-width:600px) {
+            h1 {
+                margin: 24px 0 24px 4.54545454545%;
+                max-width: 43.18181818%;
+            }
+            .tagline {
+                line-height: 1.3;
+                margin: 21px 4.54545454545% 24px 0;
+                width: 43.18181818%;
+            }
+            .content_main,
+            .content_sub {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                float: none;
+                padding: 36px 4.54545454545%;
+                width: 100%;
+            }
+            .content_sub h2:first-of-type {
+                margin-top: 0;
+            }
+            .portrait {
+                float: right;
+                margin: 0 0 30% 5%;
+                width: 47.5%;
+            }
+            article {
+                background-position: 92% bottom;
+                background-size: 43.18181818%;
+            }
+        }
+        
+        @media screen and (max-width: 400px) {
+            h1 {
+                float: none;
+                margin-top: 7%;
+                margin-bottom: 0;
+                max-width: 90.90909091%;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            .tagline {
+                float: none;
+                font-size: 1em;
+                margin: 4.54545454545%;
+                width: 90.90909091%;
+            }
+            @media screen and (max-width: 380px) {
+                .portrait {
+                    display: none
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <header class="cf">
+            <h1 class="ht">Responsive Webdesign</h1>
+            <p class="tagline">Beispiel für eine <b><u>reaktionsfähige</u></b> Webseite</p>
+        </header>
+
+        <article class="cf">
+            <div class="content_main">
+                <p><strong>Bitte HIER ihren eigenen Artikel einfügen. Bitte nicht weiter strukturieren - einfach "Plaintext". Bilder frei nach Bedarf einfuegen</strong>
+                    <br> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis
+                    <!-- hier ihre drei illustrationen zum text einfuegen -->
+                    <img src="dummy_platzhalter.png" />
+                    <img src="dummy_platzhalter_1x1.png" />
+                    <img src="dummy_platzhalter_4x3.png" />
+                </p>
+            </div>
+            <!-- /content_main -->
+
+            <aside class="content_sub">
+                <!-- hier ihr Autorenbild einfuegen -->
+                <img class="portrait" src="dummy_portrait.png" alt="Autorenbild">
+                <h2>Navigationsleiste</h2>
+                <p>Dieses Bild passt sich ebenfalls an</p>
+                <h3>Mehr dazu im Web</h3>
+                <ul>
+                    <li>RWD-Buch.de</li>
+                </ul>
+            </aside>
+            <!--  class content_sub -->
+ 
+
+        <footer>
+            <p>by Christoph Zillgens, modified by Gernot Heisenberg</p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
